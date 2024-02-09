@@ -1,0 +1,370 @@
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: radial-gradient(circle, #65146e 0%, #4cd0ead6 100%);
+        }
+        
+        .main-container {
+          max-width: 800px;
+          padding: 15px;
+          background-color: #fff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+          text-align: center;
+          margin: 30px 0px 30px 0px;
+          filter: drop-shadow(5px 5px 20px rgb(55, 55, 55));
+      }
+
+        .container {
+            max-width: 800px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 5px 8px #000;
+            border-radius: 4px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        hr{
+          margin: 10px 0px 10px 0px;
+          border: 0.5px solid #EEEDEB;
+
+        }
+
+        label {
+          font-weight: bold;
+          font-size: 1.2rem;
+          margin: 15px 0px 15px 0px;
+        }
+
+/*------------------------------------------------------------
+                   Trip Planner Content
+------------------------------------------------------------*/
+
+        .trip-planner {
+          text-align: center;
+      }
+      
+      .trip-planner h1 {
+          font-size: 2rem;
+          margin-bottom: 20px;
+          color: #365486;
+      }
+      
+      /*.trip-planner p {
+          font-size: 1.2rem;
+          margin-bottom: 20px;
+          padding: 0 0 5% 0;
+          color: #09ace7;
+      }*/
+
+/*--------------------------------------------------------------
+               Journey Destination
+--------------------------------------------------------------*/
+
+        .form-group {
+            margin: 15px 0 15px 0;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        
+        .suggestions {
+            position: relative;
+        }
+        .suggestions ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        .suggestions li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .suggestions li:hover {
+            background-color: #f0f0f0;
+        }
+        
+
+/*-----------------------------------------------------------
+              Start and End Dates of Journey
+------------------------------------------------------------*/
+        
+        .dates {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .column{
+            float: center;
+            width: 50%;
+            padding: 10px;
+        }
+        
+        .dates label {
+            display: block;
+            margin-top: 20px;
+        }
+        
+        .dates input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .dates input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .dates input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+/*---------------------------------------------------------------
+              Journey Budget
+---------------------------------------------------------------*/
+        
+        .budget label {
+            display: block;
+            margin-top: 20px;
+            
+        }
+        
+        .budget input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        .budget{
+          margin:15px 0 15px 0 ;
+        }
+
+
+/*----------------------------------------------------------------
+                   No. of Days
+----------------------------------------------------------------*/
+
+        .days label {
+            display: block;
+            margin-top: 20px;
+        }
+        
+        .days input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        .days{
+          margin: 15px 0 15px 0;
+        }
+          
+/*----------------------------------------------------------------
+                People
+----------------------------------------------------------------*/
+
+          .people, .activity{
+            padding: 15px;
+          }
+
+          .peoplegroup, .activites{
+            margin: 10px;
+          }
+
+          .btn-check {
+            display: none;
+          }
+          
+          .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            border: 0.1px solid rgb(142, 141, 141);
+            border-radius: 0.25rem;
+            transition: all 0.15s ease-in-out;
+          }
+          
+          .btn img{
+            width: 50px;
+          }
+
+          .btn-check:checked + .btn {
+            background-color: transparent;
+            color: #070707;
+            border: 2px solid #454545;
+          }
+          
+          .btn-check:disabled + .btn {
+            opacity: 0.65;
+            cursor: not-allowed;
+          }
+          
+          .btn:hover {
+            background-color: #b2c0cf;
+            color: #fff;
+          }
+          
+          .btn:focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          }
+          
+          .btn:active {
+            background-color: #3f9fae8d;
+            color: #0b0b0b;
+          }
+          
+
+
+
+
+/*--------------------------------------------------------------
+                        Activites
+--------------------------------------------------------------*/
+
+          .activites{
+            margin: 10px;
+          }
+          
+          .btn-group-toggle {
+            max-width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+          }
+          
+          .btn-group-toggle .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+          }
+          
+          .btn-group-toggle .col-4 {
+            padding-right: 15px;
+            padding-left: 15px;
+            width: 33.33333333%;
+          }
+          
+          .btn-group-toggle .btn {
+            display: block;
+            margin-right: 0;
+            margin-bottom: 0.5rem;
+            border-radius: 0.25rem;
+          }
+          
+
+
+
+/*------------------------------------------------------
+                Submit Button
+------------------------------------------------------*/
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #57c2ad;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #09d4e7;
+        }
+
+        button[type="submit"] {
+          height: 45px;
+          font-size: 1.1rem;
+          padding: 0 2rem;
+        }
+
+/*-----------------------------------------------------------
+                Responsive Code
+------------------------------------------------------------*/
+
+        @media (max-width: 767.98px) {
+          .btn-group-toggle .col-4 {
+            width: 50%;
+          }
+        }
+        
+        @media (max-width: 575.98px) {
+          .btn-group-toggle .col-4 {
+            width: 100%;
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          .btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+          }
+        }
+        
+        @media (max-width: 575.98px) {
+          .btn {
+            padding: 0.25rem 0.25rem;
+            font-size: 0.75rem;
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          .btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+          }
+        }
+        
+        @media (max-width: 575.98px) {
+          .btn {
+            padding: 0.25rem 0.25rem;
+            font-size: 0.75rem;
+          }
+        }
