@@ -5,106 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User preferences</title>
     <link rel="stylesheet" href="../CSS/form.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+   
 </head>
 <body>
-    <div class="container">
+    <div class="main-container">
         <form>
             <div class="container">
                 <div class="trip-planner">
                     <h1>TRAVEL AMIGO : JOURNEY TO PERSONALIZED ADVENTURES</h1>
-                    <p>Tell us your travel preferences</p>
                 </div>
-    
+
+<!-- Journey Destination -->
                 <div class="form-group">
                     <label for="destination">Where do you want to go?</label>
                     <div class="suggestions">
                         <input type="text" id="destination" name="destination" list="suggestions-list" />
                         <datalist id="suggestions-list">
-                            <option value="New York">
-                            <option value="Los Angeles">
-                            <option value="Chicago">
-                            <option value="Houston">
+                            <option value="Pune, Maharashtra">
+                            <option value="Delhi">
+                            <option value="Mumbai, Maharashtra">
+                            <option value="">
                             <option value="Phoenix">
                             <option value="Philadelphia">
                         </datalist> 
                     </div>
                 </div>
+                <hr>
     
-                <div class="dates">
-                    <div class="date">
-                        <label for="start-date">Journey Start date</label>
-                        <input type="date" id="start-date" name="start-date">
-                    </div>
-    
-                    <div class="date">
-                        <label for="End-date">Journey End date</label>
-                        <input type="date" id="End-date" name="End-date">
-                    </div>
-                </div>
+<!-- Journey start and end dates -->
+                <div class="row dates">
+                  <div class="date column">
+                      <label for="start-date">Journey Start date</label>
+                      <input type="date" id="start-date" name="start-date">
+                  </div>
+  
+                  <div class="date column">
+                      <label for="End-date">Journey End date</label>
+                      <input type="date" id="End-date" name="End-date">
+                  </div>
+              </div>
+              <hr>
 
+<!-- Number of days -->
                 <div class="days">
                     <label for="days">How many days you are planning for ?</label>
                     <input type="number" min="1" value="1">
                 </div>
-    
+                <hr>
+
+<!-- Trip Budget -->
                 <div class="budget">
                     <label for="budget">How much money can you spend ?</label>
                     <input type="text">
                 </div>
-                
-                <div class=" mt-5 position-relative">
-                    <form>
-                      <div class="form-group ">
-                        <label for="exampleFormControlSelect1">Who do you plan on traveling with on your next adventure?</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                          <option value="select">Select an option</option>
-                          <option value="solo">Solo</option>
-                          <option value="Couple">Couple</option>
-                          <option value="Family">Family</option>
-                          <option value="friends">Friends</option>
-                        </select>
-                      </div>
-                    </form>
+                <hr>
 
-                    <form action="/submit_selection" method="post">
-                    <div class="col-6">
-                        <label for="festivals">Festivals/events</label>
-                        <input type="checkbox" id="festivals" name="activities[]" value="festivals" checked>
-                        <br>
-                        <label for="shopping">Shopping</label>
-                        <input type="checkbox" id="shopping" name="activities[]" value="shopping" checked>
-                        <br>
-                        <label for="city_sightseeing">City sightseeing</label>
-                        <input type="checkbox" id="city_sightseeing" name="activities[]" value="city_sightseeing">
-                        <br>
-                        <label for="food_exploration">Food exploration</label>
-                        <input type="checkbox" id="food_exploration" name="activities[]" value="food_exploration" checked>
-                        <br>
-                        <label for="spa_wellness">Spa wellness</label>
-                        <input type="checkbox" id="spa_wellness" name="activities[]" value="spa_wellness" checked>
-                        <br>
-                        <label for="outdoor_adventures">Outdoor adventures</label>
-                        <input type="checkbox" id="outdoor_adventures" name="activities[]" value="outdoor_adventures">
-                        <br>
-                        <label for="nightlife">Nightlife</label>
-                        <input type="checkbox" id="nightlife" name="activities[]" value="nightlife">
-                        <br>
+<!-- people group type -->
+                <div class="people">
+                    <div class="peoplegroup">
+                      <label for="people">Who do you plan on traveling with on your next adventure?</label>
                     </div>
-                   
-                      </form>
-                
+                  
+                    <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off">
+                    <label class="btn" for="option5"><img src="../Images/people/solo.png" alt="solo">Solo</label>
                     
-                </div>
-                
+                    <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+                    <label class="btn" for="option6"><img src="../Images/people/Couple.png" alt="couple">Couple</label>
+                    
+                    <input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off">
+                    <label class="btn" for="option7"><img src="../Images/people/family.png" alt="family">Family</label>
+                    
+                    <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+                    <label class="btn" for="option8"><img src="../Images/people/friends.png" alt="">Friends</label>
+                  </div>
+                  <hr>
 
-                
-            </div>
+<!-- Activites -->                  
+                  <div class="activity">
+                    <div class="activities">
+                      <label for="activities">Which activities are you interested in?</label>
+                    </div>
+                    <div class="btn-group-toggle d-flex flex-wrap" data-toggle="buttons">
+                      <div class="row">
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
+                          <label class="btn btn-outline-secondary" for="btn-check-1"><img src="../Images/activities/beaches.png" alt="beaches">Beaches</label>
+                        </div>
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-2"  autocomplete="off">
+                          <label class="btn btn-outline-secondary" for="btn-check-2"><img src="../Images/activities/culture.png" alt="culture">Culture/Festival</label>
+                        </div>
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
+                          <label class="btn btn-outline-secondary" for="btn-check-3"><img src="../Images/activities/outdooractivity.png" alt="outdooractivity">Outdoor Adventures</label>
+                        </div>
+                      </div>
           
-            <button type="submit" class="btn btn-primary">Submit</button>
+                      <div class="row">
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+                          <label class="btn btn-outline-secondary" for="btn-check-5"><img src="../Images/activities/nightlife.png" alt="nightlife">Nightlife</label>
+                        </div>
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-6"  autocomplete="off">
+                          <label class="btn btn-outline-secondary" for="btn-check-6"><img src="../Images/activities/temple.png" alt="temple">Temples</label>
+                        </div>
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off" >
+                          <label class="btn btn-outline-secondary" for="btn-check-7"><img src="../Images/activities/waterfall.png" alt="nature">Nature</label>
+                        </div>
+                      </div>
+          
+                      <div class="row">
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-9" autocomplete="off">
+                          <label class="btn btn-outline-secondary" for="btn-check-9"><img src="../Images/activities/shopping.png" alt="shopping">Shopping</label>
+                        </div>
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-10"  autocomplete="off">
+                          <label class="btn btn-outline-secondary" for="btn-check-10"><img src="../Images/activities/food.png" alt="food">Food Exploration</label>
+                        </div>
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-11" autocomplete="off">
+                          <label class="btn btn-outline-secondary" for="btn-check-11"><img src="../Images/activities/citysightseeing.png" alt="Sightseeing">City Sightseeing</label>
+                        </div>
+                      </div>
+          
+                      <div class="row">
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-12" autocomplete="off">
+                          <label class="btn btn-outline-secondary" for="btn-check-12"><img src="../Images/activities/castle.png" alt="fort">Historic Monument</label>
+                        </div>
+                        <div class="col-4 mb-3">
+                          <input type="checkbox" class="btn-check" id="btn-check-12" autocomplete="off">
+                          <label class="btn btn-outline-secondary" for="btn-check-12"><img src="../Images/activities/spa.png" alt="spa">Spa Wellness</label>
+                        </div>
+                      </div>
 
+                    </div>
+                  </div>
+                  
+<!-- Submit Button -->
+<button type="submit" class=" btn-primary">Submit</button>
+            </div>
         </form>
     </div>
 </body>
